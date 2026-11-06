@@ -6,9 +6,9 @@
 <title>หนุ่ย ครบเครื่องเรื่องประกัน | ตัวแทนประกันชีวิต เมืองไทยประกันชีวิต</title>
 <meta name="description" content="หนุ่ย ขวัญฤดี ขวัญคุ้ม ตัวแทนประกันชีวิต บมจ. เมืองไทยประกันชีวิต เลขที่ตัวแทน 180153 ปรึกษาฟรี ประกันสุขภาพ โรคร้ายแรง ประกันชีวิต บำนาญ ลดหย่อนภาษี เช็กเบี้ยเบื้องต้น ติดต่อทาง LINE @039bkjrx">
 <meta name="theme-color" content="#d4116f">
+<link rel="canonical" href="https://khuanruedeekhuankum-hub.github.io/nuiprakan-site/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="canonical" href="https://khuanruedeekhuankum-hub.github.io/nuiprakan-site/">
 <meta property="og:url" content="https://khuanruedeekhuankum-hub.github.io/nuiprakan-site/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="th_TH">
@@ -878,6 +878,7 @@ html,body{margin:0}
 .fl-txt small{color:#1877f2;font-weight:600}
 .fl-btns{display:flex;gap:8px;flex-wrap:wrap}
 .fl-share{border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.pdpa{font-size:.78rem;color:var(--muted);margin:8px 0 0}
 </style>
 </head>
 <body>
@@ -1989,6 +1990,7 @@ html,body{margin:0}
             <a class="btn btn-line" id="sendLine" href="#" target="_blank" rel="noopener">ส่งทาง LINE</a>
             <button class="btn" type="button" id="copyMsg" style="border-color:var(--line);background:var(--surface);color:var(--ink)">คัดลอกข้อความ</button>
           </div>
+          <p class="pdpa">ข้อมูลที่กรอกใช้เพื่อติดต่อกลับและเสนอแผนประกันเท่านั้น ไม่เปิดเผยต่อบุคคลอื่น</p>
           <p class="status" id="st"></p>
         </form>
       </div>
@@ -2325,6 +2327,29 @@ document.querySelectorAll("[data-go-tab]").forEach(b=>b.addEventListener("click"
 }));
 
 /* Goal picker */
+/* Save leads to Google Sheets (Apps Script Web App) */
+(function(){
+  const SHEET_URL="https://script.google.com/macros/s/AKfycbz86dfcyemKej5DH9EzV4Zh-oRG2WBPFsDHZuIYGsbzaf9h6ACV4UtVjQaePnXBknQt/exec";
+  const v=id=>{const e=document.getElementById(id);return e?e.value.trim():"";};
+  let last="";
+  function post(d){ const k=JSON.stringify(d); if(k===last) return false; last=k;
+    try{ fetch(SHEET_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:k,keepalive:true}); }catch(e){}
+    return true; }
+  document.addEventListener("click",e=>{
+    const a=e.target.closest("#sendLine,#copyMsg,#cartLine,#cartMs"); if(!a) return;
+    if(a.id==="sendLine"||a.id==="copyMsg"){
+      const name=v("nm"), tel=v("tel"); if(!name||!tel) return;
+      const picks=[...document.querySelectorAll('#lead input[type="checkbox"]:checked')].map(c=>c.value||c.closest("label")?.textContent.trim()||"");
+      if(post({name,tel,age:v("ag"),interest:picks.join(", "),time:v("tm"),detail:v("det"),source:"เว็บไซต์ (ฟอร์ม)",website:""})){
+        const st=document.getElementById("st"); if(st) setTimeout(()=>{st.textContent+=" · บันทึกข้อมูลถึงหนุ่ยแล้ว";},50);
+      }
+    } else {
+      const items=[...document.querySelectorAll("#cartList li .ci-name, #cartList li b")].map(x=>x.textContent.trim()).filter(Boolean);
+      const t=decodeURIComponent((a.href.split("?")[1]||"")).replace(/^text=/,"");
+      post({name:"ลูกค้าจากตะกร้า (รอทักแชต)",tel:"-",interest:(items.join(", ")||t).slice(0,200),detail:t.slice(0,1000),source:a.id==="cartMs"?"ตะกร้า → Messenger":"ตะกร้า → LINE",website:""});
+    }
+  },true);
+})();
 /* Ask box -> LINE / Messenger */
 (function(){const q=document.getElementById("askQ"); if(!q) return;
  function upd(){const t="สวัสดีค่ะ หนุ่ย ขอสอบถามเรื่องประกัน\n"+(q.value.trim()||"");
