@@ -54,7 +54,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px
 .navlinks{display:flex;gap:18px;font-size:.95rem}
 .navlinks a{color:var(--ink);text-decoration:none}
 .navlinks a:hover{color:var(--brand)}
-@media (max-width:760px){.navlinks{display:none}}
+
 
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid transparent;font-family:var(--body);font-size:1rem;cursor:pointer;line-height:1.2}
 .btn-brand{background:var(--brand);color:var(--on-brand)}
@@ -879,6 +879,17 @@ html,body{margin:0}
 .fl-btns{display:flex;gap:8px;flex-wrap:wrap}
 .fl-share{border:1px solid var(--line);background:var(--surface);color:var(--ink)}
 .pdpa{font-size:.78rem;color:var(--muted);margin:8px 0 0}
+
+/* Mobile / tablet menu: scrollable pill row under the header */
+@media (max-width:1100px){
+  nav .wrap{flex-wrap:wrap;row-gap:8px;padding-bottom:8px}
+  nav .brandname{flex:1;min-width:0}
+  nav .navlinks{display:flex;order:5;flex:0 0 100%;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 -16px;padding:2px 16px 2px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent);font-size:.88rem}
+  nav .navlinks::-webkit-scrollbar{display:none}
+  nav .navlinks a{flex:none;padding:6px 14px;border-radius:999px;background:var(--brand-soft);color:var(--hero-title);font-weight:600}
+  nav .navlinks a.on{background:var(--brand);color:#fff}
+  section[id],header[id]{scroll-margin-top:124px}
+}
 </style>
 </head>
 <body>
@@ -2350,6 +2361,11 @@ document.querySelectorAll("[data-go-tab]").forEach(b=>b.addEventListener("click"
     }
   },true);
 })();
+/* nav: highlight current section */
+(function(){const links=[...document.querySelectorAll('.navlinks a[href^="#"]')];const map=new Map(links.map(a=>[a.getAttribute("href").slice(1),a]));
+ if(!("IntersectionObserver" in window))return;
+ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.remove("on"));const a=map.get(e.target.id);if(a){a.classList.add("on");try{a.scrollIntoView({block:"nearest",inline:"center"});}catch(_){}}}});},{rootMargin:"-45% 0px -50% 0px"});
+ map.forEach((a,id)=>{const el=document.getElementById(id);if(el)io.observe(el);});})();
 /* Ask box -> LINE / Messenger */
 (function(){const q=document.getElementById("askQ"); if(!q) return;
  function upd(){const t="สวัสดีค่ะ หนุ่ย ขอสอบถามเรื่องประกัน\n"+(q.value.trim()||"");
