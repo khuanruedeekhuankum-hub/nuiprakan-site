@@ -921,6 +921,53 @@ html.paged [data-page]:not(.pg-on){display:none!important}
 @media (max-width:860px){.hn-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hn-img{height:90px}}
 @media (prefers-reduced-motion:reduce){.hn-tile,.hn-tile:hover{transition:none;transform:none}}
 .navlinks a.on{color:var(--brand);font-weight:700}
+
+/* Elite Health Plus detail page */
+.ehp{background:radial-gradient(720px 340px at 100% 0%,var(--soft-glow),transparent 70%),var(--soft-bg)}
+.ehp-back{display:inline-block;margin-bottom:14px;color:var(--brand);font-weight:600;text-decoration:none}
+.ehp-hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 14px 34px rgba(80,10,45,.08)}
+.ehp-hero-img img{width:100%;max-height:360px;object-fit:cover;object-position:center 20%;border-radius:20px;display:block}
+.ehp-lead{color:var(--muted);margin:10px 0 14px}
+.ehp-big{display:inline-flex;align-items:baseline;gap:10px;flex-wrap:wrap;background:linear-gradient(120deg,var(--brand-deep),var(--brand));color:#fff;border-radius:18px;padding:12px 20px}
+.ehp-big small{width:100%;opacity:.9}
+.ehp-big b{font-family:var(--display);font-size:clamp(2.4rem,6vw,3.4rem);line-height:1;color:#ffd77a}
+.ehp-pills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:14px 0}
+.ehp-pills li{background:var(--brand-soft);color:var(--hero-title);font-weight:600;font-size:.88rem;padding:6px 12px;border-radius:999px}
+.ehp-cta{display:flex;gap:10px;flex-wrap:wrap}
+.ehp-cover{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}
+.ehp-cover div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.ehp-ic{font-size:1.7rem}
+.ehp-cover b{color:var(--hero-title)}
+.ehp-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+.ehp-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.ehp-card h3{display:flex;align-items:center;gap:10px;color:var(--hero-title);font-size:1.2rem;margin-bottom:8px}
+.ehp-n{background:var(--brand);color:#fff;font-size:.8rem;padding:4px 10px;border-radius:999px}
+.ehp-card ul{margin:0;padding-left:20px;line-height:1.7}
+.ehp-h{color:var(--hero-title);font-size:1.3rem;margin:6px 0 12px}
+.ehp-tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:18px;margin-bottom:22px}
+.ehp-tbl{width:100%;border-collapse:collapse;min-width:560px;font-size:.92rem}
+.ehp-tbl th,.ehp-tbl td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:center}
+.ehp-tbl th:first-child,.ehp-tbl td:first-child{text-align:left}
+.ehp-tbl thead th{background:var(--hero-title);color:#fff}
+.ehp-tbl thead th.hi{background:var(--brand)}
+.ehp-tbl td.hi{background:var(--brand-soft);font-weight:700;color:var(--hero-title)}
+.ehp-tbl td.all{font-weight:700;color:var(--brand)}
+.ehp-tbl td.sub{font-size:.8rem;color:var(--muted);text-align:center!important}
+.ehp-area{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:22px}
+.ehp-area-img img{width:100%;border-radius:14px;display:block}
+.ehp-areas{margin:0;padding-left:22px;line-height:1.9;font-weight:600}
+.ehp-note{font-size:.85rem;color:var(--muted);margin:6px 0 0}
+.ehp-rider{display:flex;gap:14px;align-items:flex-start}
+.ehp-rider img{width:96px;height:110px;object-fit:cover;border-radius:14px;flex:none}
+.ehp-rider h4{color:var(--hero-title);font-size:1.05rem;margin:0}
+.ehp-amt{font-family:var(--display);font-size:1.25rem;color:var(--brand);font-weight:700;margin:4px 0}
+.ehp-rider p{margin:0 0 4px;font-size:.92rem}
+.ehp-know{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:18px;padding:20px}
+.ehp-know h3{color:var(--hero-title);margin-bottom:6px}
+.ehp-know ul{padding-left:20px;line-height:1.75;margin:0 0 14px}
+.ehp-src{font-size:.78rem;color:var(--muted);margin:12px 0 0}
+.ehp-more{font-weight:700;color:var(--brand);text-decoration:none;white-space:nowrap}
+@media (max-width:860px){.ehp-hero,.ehp-area{grid-template-columns:1fr}.ehp-hero-img{order:-1}.ehp-hero-img img{max-height:260px}.ehp-two{grid-template-columns:1fr}.ehp-cover{grid-template-columns:repeat(2,minmax(0,1fr))}.ehp-hero{padding:18px}}
 </style>
 </head>
 <body>
@@ -1376,7 +1423,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
           </ul>
           <p class="note">Must be attached to a main policy. The company may apply a 30% or 50% co-payment at renewal based on claims history.</p>
           </details>
-          <div class="foot"><span class="src">Source: Elite Health Plus brochure (Mar 2025)</span><a class="pdf-link" href="../docs/elite-health-plus.pdf" target="_blank" rel="noopener">View brochure (PDF)</a><button class="ask" type="button" data-p="Elite Health Plus">Request a quote →</button></div>
+          <div class="foot"><span class="src">Source: Elite Health Plus brochure (Mar 2025)</span><a class="pdf-link" href="../docs/elite-health-plus.pdf" target="_blank" rel="noopener">View brochure (PDF)</a><a class="ehp-more" href="#elite-health-plus">Full details →</a><button class="ask" type="button" data-p="Elite Health Plus">Request a quote →</button></div>
         </article>
 
         <article class="prod" data-cat="health">
@@ -1734,6 +1781,117 @@ html.paged [data-page]:not(.pg-on){display:none!important}
     </div>
   </section>
 
+
+  <section id="elite-health-plus" class="ehp">
+    <div class="wrap">
+      <a class="ehp-back" href="#products">← Back to plans</a>
+      <div class="ehp-hero">
+        <div class="ehp-hero-txt">
+          <span class="kicker">Premium health insurance</span>
+          <h2 class="h2x">Elite Health Plus<br><span>Comprehensive care in Thailand and worldwide</span></h2>
+          <p class="ehp-lead">Upgraded health cover for inpatient and outpatient care, under the New Health Standard</p>
+          <div class="ehp-big"><small>Maximum cover</small><b>20–100</b><span>million baht a year</span></div>
+          <ul class="ehp-pills">
+            <li>Entry age 11–90</li>
+            <li>Covered to age 99</li>
+            <li>4 coverage areas</li>
+          </ul>
+          <div class="ehp-cta">
+            <button class="btn btn-brand ask" type="button" data-p="Elite Health Plus">Request a quote</button>
+            <a class="btn btn-ghost" href="../docs/elite-health-plus.pdf" target="_blank" rel="noopener">View brochure (PDF)</a>
+          </div>
+        </div>
+        <div class="ehp-hero-img"><img src="../images/img-39-3244e9d9e2.jpg" alt="Illustration: a smiling, confident woman"></div>
+      </div>
+
+      <div class="ehp-cover">
+        <div><span class="ehp-ic">🦠</span><b>Epidemics</b></div>
+        <div><span class="ehp-ic">🎗️</span><b>Critical illness</b></div>
+        <div><span class="ehp-ic">🩺</span><b>General illness</b></div>
+        <div><span class="ehp-ic">🚑</span><b>Accident</b></div>
+      </div>
+
+      <div class="ehp-two">
+        <article class="ehp-card">
+          <h3><span class="ehp-n">IPD</span>Inpatient</h3>
+          <ul>
+            <li>Standard single room at any hospital, or a special single room at 10,000–25,000 baht a day by plan</li>
+            <li>ICU paid at actual cost, up to 365 days in total</li>
+            <li>Inpatient treatment paid at actual cost</li>
+          </ul>
+        </article>
+        <article class="ehp-card">
+          <h3><span class="ehp-n">OPD</span>Outpatient</h3>
+          <ul>
+            <li>Targeted cancer therapy and chemotherapy</li>
+            <li>MRI and CT scan diagnosis</li>
+            <li>Kidney treatment without admission, paid at actual cost</li>
+            <li>General outpatient care, annual lump-sum limit by plan</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="ehp-h">Compare the 4 plans</h3>
+      <div class="ehp-tbl-wrap">
+        <table class="ehp-tbl">
+          <thead><tr><th>Benefit (baht)</th><th>20M plan</th><th>40M plan</th><th>75M plan</th><th class="hi">100M plan</th></tr></thead>
+          <tbody>
+            <tr><td>Room (per day)</td><td>10,000</td><td>12,000</td><td>15,000</td><td class="hi">25,000</td></tr>
+            <tr><td colspan="5" class="sub">or up to the standard single room rate, whichever is higher</td></tr>
+            <tr><td>ICU, inpatient, kidney care, targeted therapy, emergency assistance</td><td colspan="4" class="all">Actual cost</td></tr>
+            <tr><td>Outpatient (OPD) per year</td><td>Not covered</td><td>20,000</td><td>40,000</td><td class="hi">Actual cost</td></tr>
+            <tr><td>Acupuncture, naturopathy, musculoskeletal therapy per year</td><td colspan="2">Not covered</td><td>10,000</td><td class="hi">40,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ehp-area">
+        <div class="ehp-area-img"><img src="../images/img-40-20fd6ee2be.jpg" alt="Illustration: cities in Thailand and abroad"></div>
+        <div>
+          <h3 class="ehp-h">Choose 1 of 4 coverage areas</h3>
+          <ol class="ehp-areas">
+            <li>Thailand only</li>
+            <li>Asia (46 countries)</li>
+            <li>Worldwide excluding the USA</li>
+            <li>Worldwide including the USA</li>
+          </ol>
+          <p class="ehp-note">Available with every plan; premiums vary by area</p>
+        </div>
+      </div>
+
+      <h3 class="ehp-h">Optional add-ons</h3>
+      <div class="ehp-two">
+        <article class="ehp-card ehp-rider">
+          <img src="../images/img-41-0ef1e6549c.jpg" alt="Illustration: mother with newborn">
+          <div><h4>Maternity Plus</h4>
+          <p class="ehp-amt">2–4 million baht per policy year</p>
+          <p>Covers pregnancy, delivery and post-natal care; entry age 15–49; covered in Thailand only</p></div>
+        </article>
+        <article class="ehp-card ehp-rider">
+          <img src="../images/img-42-10f1449f88.jpg" alt="Illustration: woman wearing glasses">
+          <div><h4>Well-Being Plus</h4>
+          <p class="ehp-amt">24,000–38,500 baht per policy year</p>
+          <p>Annual check-up, WHO-approved vaccines, eye care and dental care</p></div>
+        </article>
+      </div>
+
+      <div class="ehp-know">
+        <h3>Good to know</h3>
+        <ul>
+          <li>Must be attached to a main life policy; renewable to age 98, covered to age 99</li>
+          <li>At renewal, a 30% or 50% co-payment may apply based on claims history</li>
+          <li>Premiums depend on age, gender, occupation class, plan and area, and may change with age at each policy anniversary</li>
+          <li>21 exclusions apply, e.g. cosmetic surgery; see the brochure and policy</li>
+        </ul>
+        <div class="ehp-cta">
+          <button class="btn btn-brand ask" type="button" data-p="Elite Health Plus (premium table by age)">Get premiums for my age</button>
+          <a class="btn btn-ghost" href="../docs/elite-health-plus.pdf" target="_blank" rel="noopener">View brochure (PDF)</a>
+        </div>
+        <p class="ehp-src">Source: Muang Thai Life Elite Health Plus brochure (MTL_2-02-04-0480, 20 Mar 2025). Actual coverage follows the policy.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="premium">
     <div class="wrap">
       <div class="sec-head">
@@ -1742,7 +1900,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
         <p>Shows only sample premiums published in the company's product documents. For premiums based on your age and plan, send your details to Nui on LINE for a quote from the company system.</p>
       </div>
       <div class="premium-grid">
-      <img class="calc-banner zoomable" tabindex="0" src="../images/img-39-954e6e3422.jpg" alt="Check sample premiums and compare plans easily: health, critical illness, life, accident, pension">
+      <img class="calc-banner zoomable" tabindex="0" src="../images/img-43-954e6e3422.jpg" alt="Check sample premiums and compare plans easily: health, critical illness, life, accident, pension">
       <div class="calc">
         <form class="panel" id="pForm">
           <div class="field"><label for="pProd">Plans</label>
@@ -1807,7 +1965,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
 
   <section class="about" id="about">
     <div class="wrap about-grid">
-      <img class="poster zoomable" tabindex="0" src="../images/img-40-a707ff5176.jpg" alt="Nui Khuanruedee Khuankum, life and health insurance agent: life and financial planning, health and medical cover, family protection, secure retirement, savings for your children's future">
+      <img class="poster zoomable" tabindex="0" src="../images/img-44-a707ff5176.jpg" alt="Nui Khuanruedee Khuankum, life and health insurance agent: life and financial planning, health and medical cover, family protection, secure retirement, savings for your children's future">
       <div class="about-text">
         <span class="kicker">Meet Nui</span>
         <h2 class="h2x">Caring for you and your loved ones<br><span>with the right insurance plan</span></h2>
@@ -1829,7 +1987,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
       <div class="sec-head"><span class="kicker">How it works</span>
         <h2 class="h2x">Just 4 simple steps<br><span>Ongoing care through to claims</span></h2><p>From hearing your goals to the day you need to claim</p></div>
 <div class="steps-grid">
-            <img class="consult zoomable" tabindex="0" src="../images/img-41-6ee0b1516f.jpg" alt="Illustration: agent explaining a plan to a family">
+            <img class="consult zoomable" tabindex="0" src="../images/img-45-6ee0b1516f.jpg" alt="Illustration: agent explaining a plan to a family">
       <ol class="steps">
         <li><h3>Talk about your goals</h3><p>Family responsibilities, existing benefits and yearly budget</p></li>
         <li><h3>Find the gaps</h3><p>Compare current cover with real medical costs to find what's missing</p></li>
@@ -2007,14 +2165,14 @@ html.paged [data-page]:not(.pg-on){display:none!important}
       </div>
       <div class="contact">
         <div class="contact-left">
-          <img class="poster2 zoomable" tabindex="0" src="../images/img-42-83a24b2189.jpg" alt="Nui, life and health insurance advisor, free consultation: health, life, critical illness, endowment and education insurance">
+          <img class="poster2 zoomable" tabindex="0" src="../images/img-46-83a24b2189.jpg" alt="Nui, life and health insurance advisor, free consultation: health, life, critical illness, endowment and education insurance">
           <div class="panel">
           <h3 style="font-size:1.1rem">Contact channels</h3>
           <div class="ch">
             <div class="line"><span>Phone</span><b class="num" data-cfg="phone"></b></div>
             <div class="line"><span>LINE</span><b data-cfg="line"></b></div>
             <div class="qr-box">
-              <img class="qr" src="../images/img-43-cfb7368b33.png" alt="QR code to add LINE OA Nui — All-in-One Insurance">
+              <img class="qr" src="../images/img-47-cfb7368b33.png" alt="QR code to add LINE OA Nui — All-in-One Insurance">
               <div><b>Scan to add friend</b><p class="note">LINE OA @039bkjrx<br>Nui — All-in-One Insurance</p></div>
             </div>
             <a class="btn btn-line" data-line-add href="#contact" target="_blank" rel="noopener">Add LINE OA Nui — All-in-One Insurance</a>
@@ -2064,12 +2222,12 @@ html.paged [data-page]:not(.pg-on){display:none!important}
         <p>We work as a team and keep learning new plans together, so we can advise customers correctly</p>
       </div>
       <div class="team-gallery">
-        <button type="button" data-cap="Four Team Family members celebrating at the office" aria-label="View larger: four Team Family members celebrating at the office"><img class="team-thumb zoomable" src="../images/img-44-ab9ceccce2.jpg" alt="Four Team Family members celebrating at the office" loading="lazy"></button>
-        <button type="button" data-cap="Nui (right) with Team Family members" aria-label="View larger: Nui (right) with Team Family members"><img class="team-thumb zoomable" src="../images/img-45-aaeccbfdf8.jpg" alt="Nui (right) with Team Family members" loading="lazy"></button>
-        <button type="button" data-cap="Team Family members in a group photo at the office" aria-label="View larger: Team Family members in a group photo at the office"><img class="team-thumb zoomable" src="../images/img-46-f29c2fcc2d.jpg" alt="Team Family members in a group photo at the office" loading="lazy"></button>
-        <button type="button" data-cap="Team Family in a product learning session" aria-label="View larger: Team Family in a product learning session"><img class="team-thumb zoomable" src="../images/img-47-6f507f3173.jpg" alt="Team Family in a product learning session" loading="lazy"></button>
-        <button type="button" data-cap="Team Family studying plan details at the meeting table" aria-label="View larger: Team Family studying plan details at the meeting table"><img class="team-thumb zoomable" src="../images/img-48-031e75bb95.jpg" alt="Team Family studying plan details at the meeting table" loading="lazy"></button>
-        <button type="button" data-cap="A Team Family member practising the proposal system on a tablet" aria-label="View larger: a Team Family member practising the proposal system on a tablet"><img class="team-thumb zoomable" src="../images/img-49-f341dee54f.jpg" alt="A Team Family member practising the proposal system on a tablet" loading="lazy"></button>
+        <button type="button" data-cap="Four Team Family members celebrating at the office" aria-label="View larger: four Team Family members celebrating at the office"><img class="team-thumb zoomable" src="../images/img-48-ab9ceccce2.jpg" alt="Four Team Family members celebrating at the office" loading="lazy"></button>
+        <button type="button" data-cap="Nui (right) with Team Family members" aria-label="View larger: Nui (right) with Team Family members"><img class="team-thumb zoomable" src="../images/img-49-aaeccbfdf8.jpg" alt="Nui (right) with Team Family members" loading="lazy"></button>
+        <button type="button" data-cap="Team Family members in a group photo at the office" aria-label="View larger: Team Family members in a group photo at the office"><img class="team-thumb zoomable" src="../images/img-50-f29c2fcc2d.jpg" alt="Team Family members in a group photo at the office" loading="lazy"></button>
+        <button type="button" data-cap="Team Family in a product learning session" aria-label="View larger: Team Family in a product learning session"><img class="team-thumb zoomable" src="../images/img-51-6f507f3173.jpg" alt="Team Family in a product learning session" loading="lazy"></button>
+        <button type="button" data-cap="Team Family studying plan details at the meeting table" aria-label="View larger: Team Family studying plan details at the meeting table"><img class="team-thumb zoomable" src="../images/img-52-031e75bb95.jpg" alt="Team Family studying plan details at the meeting table" loading="lazy"></button>
+        <button type="button" data-cap="A Team Family member practising the proposal system on a tablet" aria-label="View larger: a Team Family member practising the proposal system on a tablet"><img class="team-thumb zoomable" src="../images/img-53-f341dee54f.jpg" alt="A Team Family member practising the proposal system on a tablet" loading="lazy"></button>
       </div>
       <p class="gal-hint">Tap a photo to view full size</p>
     </div>
@@ -2414,7 +2572,7 @@ document.querySelectorAll("[data-go-tab]").forEach(b=>b.addEventListener("click"
 document.querySelectorAll(".lang-sw a").forEach(a=>a.addEventListener("click",()=>{if(location.hash)a.href=a.href.split("#")[0]+location.hash;}));
 /* Multi-page router: one page per menu item */
 (function(){
-  const PAGES={home:[".cover-wrap","#top",".trust",".home-nav"],why:["#why","#situation"],plans:["#types","#products"],premium:["#premium"],tax:["#tax"],about:["#about","#steps","#team"],articles:["#articles"],faq:["#faq"],contact:["#contact"]};
+  const PAGES={home:[".cover-wrap","#top",".trust",".home-nav"],why:["#why","#situation"],plans:["#types","#products"],premium:["#premium"],tax:["#tax"],about:["#about","#steps","#team"],articles:["#articles"],faq:["#faq"],contact:["#contact"],ehp:["#elite-health-plus"]};
   const first={};
   Object.entries(PAGES).forEach(([pg,sels])=>sels.forEach((q,i)=>{const el=document.querySelector(q);if(el){el.dataset.page=pg;if(!first[pg])first[pg]=el;}}));
   document.documentElement.classList.add("paged");

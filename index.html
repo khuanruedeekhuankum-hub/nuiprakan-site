@@ -921,6 +921,53 @@ html.paged [data-page]:not(.pg-on){display:none!important}
 @media (max-width:860px){.hn-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hn-img{height:90px}}
 @media (prefers-reduced-motion:reduce){.hn-tile,.hn-tile:hover{transition:none;transform:none}}
 .navlinks a.on{color:var(--brand);font-weight:700}
+
+/* Elite Health Plus detail page */
+.ehp{background:radial-gradient(720px 340px at 100% 0%,var(--soft-glow),transparent 70%),var(--soft-bg)}
+.ehp-back{display:inline-block;margin-bottom:14px;color:var(--brand);font-weight:600;text-decoration:none}
+.ehp-hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 14px 34px rgba(80,10,45,.08)}
+.ehp-hero-img img{width:100%;max-height:360px;object-fit:cover;object-position:center 20%;border-radius:20px;display:block}
+.ehp-lead{color:var(--muted);margin:10px 0 14px}
+.ehp-big{display:inline-flex;align-items:baseline;gap:10px;flex-wrap:wrap;background:linear-gradient(120deg,var(--brand-deep),var(--brand));color:#fff;border-radius:18px;padding:12px 20px}
+.ehp-big small{width:100%;opacity:.9}
+.ehp-big b{font-family:var(--display);font-size:clamp(2.4rem,6vw,3.4rem);line-height:1;color:#ffd77a}
+.ehp-pills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:14px 0}
+.ehp-pills li{background:var(--brand-soft);color:var(--hero-title);font-weight:600;font-size:.88rem;padding:6px 12px;border-radius:999px}
+.ehp-cta{display:flex;gap:10px;flex-wrap:wrap}
+.ehp-cover{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}
+.ehp-cover div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.ehp-ic{font-size:1.7rem}
+.ehp-cover b{color:var(--hero-title)}
+.ehp-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+.ehp-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.ehp-card h3{display:flex;align-items:center;gap:10px;color:var(--hero-title);font-size:1.2rem;margin-bottom:8px}
+.ehp-n{background:var(--brand);color:#fff;font-size:.8rem;padding:4px 10px;border-radius:999px}
+.ehp-card ul{margin:0;padding-left:20px;line-height:1.7}
+.ehp-h{color:var(--hero-title);font-size:1.3rem;margin:6px 0 12px}
+.ehp-tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:18px;margin-bottom:22px}
+.ehp-tbl{width:100%;border-collapse:collapse;min-width:560px;font-size:.92rem}
+.ehp-tbl th,.ehp-tbl td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:center}
+.ehp-tbl th:first-child,.ehp-tbl td:first-child{text-align:left}
+.ehp-tbl thead th{background:var(--hero-title);color:#fff}
+.ehp-tbl thead th.hi{background:var(--brand)}
+.ehp-tbl td.hi{background:var(--brand-soft);font-weight:700;color:var(--hero-title)}
+.ehp-tbl td.all{font-weight:700;color:var(--brand)}
+.ehp-tbl td.sub{font-size:.8rem;color:var(--muted);text-align:center!important}
+.ehp-area{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:22px}
+.ehp-area-img img{width:100%;border-radius:14px;display:block}
+.ehp-areas{margin:0;padding-left:22px;line-height:1.9;font-weight:600}
+.ehp-note{font-size:.85rem;color:var(--muted);margin:6px 0 0}
+.ehp-rider{display:flex;gap:14px;align-items:flex-start}
+.ehp-rider img{width:96px;height:110px;object-fit:cover;border-radius:14px;flex:none}
+.ehp-rider h4{color:var(--hero-title);font-size:1.05rem;margin:0}
+.ehp-amt{font-family:var(--display);font-size:1.25rem;color:var(--brand);font-weight:700;margin:4px 0}
+.ehp-rider p{margin:0 0 4px;font-size:.92rem}
+.ehp-know{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:18px;padding:20px}
+.ehp-know h3{color:var(--hero-title);margin-bottom:6px}
+.ehp-know ul{padding-left:20px;line-height:1.75;margin:0 0 14px}
+.ehp-src{font-size:.78rem;color:var(--muted);margin:12px 0 0}
+.ehp-more{font-weight:700;color:var(--brand);text-decoration:none;white-space:nowrap}
+@media (max-width:860px){.ehp-hero,.ehp-area{grid-template-columns:1fr}.ehp-hero-img{order:-1}.ehp-hero-img img{max-height:260px}.ehp-two{grid-template-columns:1fr}.ehp-cover{grid-template-columns:repeat(2,minmax(0,1fr))}.ehp-hero{padding:18px}}
 </style>
 </head>
 <body>
@@ -1376,7 +1423,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
           </ul>
           <p class="note">ต้องซื้อแนบกับกรมธรรม์หลัก บริษัทอาจกำหนดส่วนร่วมจ่าย 30% หรือ 50% เมื่อต่ออายุ ตามประวัติการเคลม</p>
           </details>
-          <div class="foot"><span class="src">ที่มา: โบรชัวร์ Elite Health Plus (มี.ค. 2568)</span><a class="pdf-link" href="docs/elite-health-plus.pdf" target="_blank" rel="noopener">ดูโบรชัวร์ (PDF)</a><button class="ask" type="button" data-p="Elite Health Plus">ขอใบเสนอราคา →</button></div>
+          <div class="foot"><span class="src">ที่มา: โบรชัวร์ Elite Health Plus (มี.ค. 2568)</span><a class="pdf-link" href="docs/elite-health-plus.pdf" target="_blank" rel="noopener">ดูโบรชัวร์ (PDF)</a><a class="ehp-more" href="#elite-health-plus">ดูหน้ารายละเอียด →</a><button class="ask" type="button" data-p="Elite Health Plus">ขอใบเสนอราคา →</button></div>
         </article>
 
         <article class="prod" data-cat="health">
@@ -1734,6 +1781,117 @@ html.paged [data-page]:not(.pg-on){display:none!important}
     </div>
   </section>
 
+
+  <section id="elite-health-plus" class="ehp">
+    <div class="wrap">
+      <a class="ehp-back" href="#products">← กลับไปหน้าแบบประกัน</a>
+      <div class="ehp-hero">
+        <div class="ehp-hero-txt">
+          <span class="kicker">ประกันสุขภาพระดับพรีเมียม</span>
+          <h2 class="h2x">Elite Health Plus<br><span>ดูแลครอบคลุม ทั่วไทยและทั่วโลก</span></h2>
+          <p class="ehp-lead">ยกระดับความคุ้มครองสุขภาพ ทั้งผู้ป่วยในและผู้ป่วยนอก ในมาตรฐานการประกันสุขภาพแบบใหม่ (New Health Standard)</p>
+          <div class="ehp-big"><small>วงเงินคุ้มครองสูงสุด</small><b>20–100</b><span>ล้านบาทต่อปี</span></div>
+          <ul class="ehp-pills">
+            <li>สมัครได้อายุ 11–90 ปี</li>
+            <li>คุ้มครองถึงอายุ 99 ปี</li>
+            <li>เลือกพื้นที่รักษาได้ 4 แบบ</li>
+          </ul>
+          <div class="ehp-cta">
+            <button class="btn btn-brand ask" type="button" data-p="Elite Health Plus">ขอใบเสนอราคา</button>
+            <a class="btn btn-ghost" href="docs/elite-health-plus.pdf" target="_blank" rel="noopener">ดูโบรชัวร์ (PDF)</a>
+          </div>
+        </div>
+        <div class="ehp-hero-img"><img src="images/img-39-3244e9d9e2.jpg" alt="ภาพประกอบ ผู้หญิงยิ้มอย่างมั่นใจ"></div>
+      </div>
+
+      <div class="ehp-cover">
+        <div><span class="ehp-ic">🦠</span><b>โรคระบาด</b></div>
+        <div><span class="ehp-ic">🎗️</span><b>โรคร้ายแรง</b></div>
+        <div><span class="ehp-ic">🩺</span><b>โรคทั่วไป</b></div>
+        <div><span class="ehp-ic">🚑</span><b>อุบัติเหตุ</b></div>
+      </div>
+
+      <div class="ehp-two">
+        <article class="ehp-card">
+          <h3><span class="ehp-n">IPD</span>ผู้ป่วยใน</h3>
+          <ul>
+            <li>ห้องเดี่ยวมาตรฐานได้ทุกโรงพยาบาล หรือค่าห้องเดี่ยวพิเศษ 10,000–25,000 บาทต่อวัน ตามแผน</li>
+            <li>ห้องผู้ป่วยหนัก (ICU) เหมาจ่ายตามจริง รวมสูงสุด 365 วัน</li>
+            <li>ค่ารักษาพยาบาลผู้ป่วยใน จ่ายตามจริง</li>
+          </ul>
+        </article>
+        <article class="ehp-card">
+          <h3><span class="ehp-n">OPD</span>ผู้ป่วยนอก</h3>
+          <ul>
+            <li>การรักษามะเร็งแบบออกฤทธิ์จำเพาะต่อเซลล์มะเร็ง (Targeted Therapy) และเคมีบำบัด</li>
+            <li>การวินิจฉัยโรคแบบ MRI และ CT Scan</li>
+            <li>การรักษาโรคไตที่ไม่ต้องแอดมิต จ่ายตามจริง</li>
+            <li>ค่ารักษาผู้ป่วยนอกทั่วไป เหมาจ่ายรายปี ตามแผนที่เลือก</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="ehp-h">เปรียบเทียบ 4 แผนความคุ้มครอง</h3>
+      <div class="ehp-tbl-wrap">
+        <table class="ehp-tbl">
+          <thead><tr><th>ความคุ้มครอง (บาท)</th><th>แผน 20 ล้าน</th><th>แผน 40 ล้าน</th><th>แผน 75 ล้าน</th><th class="hi">แผน 100 ล้าน</th></tr></thead>
+          <tbody>
+            <tr><td>ค่าห้อง (ต่อวัน)</td><td>10,000</td><td>12,000</td><td>15,000</td><td class="hi">25,000</td></tr>
+            <tr><td colspan="5" class="sub">หรือไม่เกินค่าห้องพักเดี่ยวมาตรฐาน แล้วแต่จำนวนใดจะสูงกว่า</td></tr>
+            <tr><td>ICU, ผู้ป่วยใน, รักษาไต, Targeted Therapy, ช่วยเหลือฉุกเฉิน</td><td colspan="4" class="all">จ่ายตามจริง</td></tr>
+            <tr><td>ผู้ป่วยนอก (OPD) ต่อปี</td><td>ไม่คุ้มครอง</td><td>20,000</td><td>40,000</td><td class="hi">จ่ายตามจริง</td></tr>
+            <tr><td>ฝังเข็ม ธรรมชาติบำบัด กระดูกและกล้ามเนื้อบำบัด ต่อปี</td><td colspan="2">ไม่คุ้มครอง</td><td>10,000</td><td class="hi">40,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ehp-area">
+        <div class="ehp-area-img"><img src="images/img-40-20fd6ee2be.jpg" alt="ภาพประกอบ เมืองในไทยและต่างประเทศ"></div>
+        <div>
+          <h3 class="ehp-h">เลือกพื้นที่ความคุ้มครองได้ 1 ใน 4 แบบ</h3>
+          <ol class="ehp-areas">
+            <li>เฉพาะประเทศไทย</li>
+            <li>ทวีปเอเชีย เฉพาะ 46 ประเทศ</li>
+            <li>ทั่วโลก ยกเว้นสหรัฐอเมริกา</li>
+            <li>ทั่วโลก รวมสหรัฐอเมริกา</li>
+          </ol>
+          <p class="ehp-note">เลือกพื้นที่ได้กับทุกแผน เบี้ยประกันแตกต่างตามพื้นที่ที่เลือก</p>
+        </div>
+      </div>
+
+      <h3 class="ehp-h">ความคุ้มครองเสริม เลือกซื้อเพิ่มได้</h3>
+      <div class="ehp-two">
+        <article class="ehp-card ehp-rider">
+          <img src="images/img-41-0ef1e6549c.jpg" alt="ภาพประกอบ แม่กับลูกแรกเกิด">
+          <div><h4>การคลอดบุตร พลัส (Maternity Plus)</h4>
+          <p class="ehp-amt">2–4 ล้านบาท ต่อปีกรมธรรม์</p>
+          <p>ดูแลค่าตั้งครรภ์ การคลอดบุตร และหลังคลอด สมัครได้อายุ 15–49 ปี คุ้มครองเฉพาะในประเทศไทย</p></div>
+        </article>
+        <article class="ehp-card ehp-rider">
+          <img src="images/img-42-10f1449f88.jpg" alt="ภาพประกอบ ผู้หญิงสวมแว่นตา">
+          <div><h4>สุขภาพดี พลัส (Well-Being Plus)</h4>
+          <p class="ehp-amt">24,000–38,500 บาท ต่อปีกรมธรรม์</p>
+          <p>ตรวจสุขภาพประจำปี ฉีดวัคซีนตามที่ WHO รับรอง ดูแลสุขภาพตา และสุขภาพฟัน</p></div>
+        </article>
+      </div>
+
+      <div class="ehp-know">
+        <h3>ข้อควรรู้</h3>
+        <ul>
+          <li>ต้องซื้อแนบกับกรมธรรม์ประกันชีวิตหลัก ต่ออายุได้ถึงอายุ 98 ปี คุ้มครองถึงอายุ 99 ปี</li>
+          <li>เมื่อต่ออายุ บริษัทอาจกำหนดค่าใช้จ่ายร่วม (Copayment) 30% หรือ 50% ตามประวัติการเคลม</li>
+          <li>เบี้ยประกันขึ้นกับอายุ เพศ ชั้นอาชีพ แผน และพื้นที่ความคุ้มครอง ปรับได้ตามอายุเมื่อครบรอบปีกรมธรรม์</li>
+          <li>มีข้อยกเว้นความคุ้มครอง 21 ข้อ เช่น ศัลยกรรมเพื่อความงาม โปรดศึกษาในโบรชัวร์และกรมธรรม์</li>
+        </ul>
+        <div class="ehp-cta">
+          <button class="btn btn-brand ask" type="button" data-p="Elite Health Plus (ขอตารางเบี้ยตามอายุ)">ขอตารางเบี้ยตามอายุ</button>
+          <a class="btn btn-ghost" href="docs/elite-health-plus.pdf" target="_blank" rel="noopener">ดูโบรชัวร์ (PDF)</a>
+        </div>
+        <p class="ehp-src">ที่มา: โบรชัวร์ Elite Health Plus เมืองไทยประกันชีวิต (MTL_2-02-04-0480, 20 มี.ค. 2568) ความคุ้มครองจริงเป็นไปตามกรมธรรม์</p>
+      </div>
+    </div>
+  </section>
+
   <section id="premium">
     <div class="wrap">
       <div class="sec-head">
@@ -1742,7 +1900,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
         <p>แสดงเฉพาะตัวอย่างเบี้ยที่บริษัทเผยแพร่ในเอกสารผลิตภัณฑ์ สำหรับเบี้ยตามอายุและแผนของท่าน ส่งข้อมูลให้หนุ่ยทาง LINE เพื่อรับใบเสนอราคาจากระบบของบริษัท</p>
       </div>
       <div class="premium-grid">
-      <img class="calc-banner zoomable" tabindex="0" src="images/img-39-954e6e3422.jpg" alt="ตรวจสอบเบี้ยประกันเบื้องต้น เปรียบเทียบแผนได้ง่าย: ประกันสุขภาพ โรคร้ายแรง ชีวิต อุบัติเหตุ บำนาญ">
+      <img class="calc-banner zoomable" tabindex="0" src="images/img-43-954e6e3422.jpg" alt="ตรวจสอบเบี้ยประกันเบื้องต้น เปรียบเทียบแผนได้ง่าย: ประกันสุขภาพ โรคร้ายแรง ชีวิต อุบัติเหตุ บำนาญ">
       <div class="calc">
         <form class="panel" id="pForm">
           <div class="field"><label for="pProd">แบบประกัน</label>
@@ -1807,7 +1965,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
 
   <section class="about" id="about">
     <div class="wrap about-grid">
-      <img class="poster zoomable" tabindex="0" src="images/img-40-a707ff5176.jpg" alt="หนุ่ย ขวัญฤดี ขวัญคุ้ม ตัวแทนประกันชีวิตและประกันสุขภาพ: วางแผนชีวิตและการเงิน คุ้มครองสุขภาพและค่ารักษา สร้างหลักประกันให้ครอบครัว วางแผนเกษียณอย่างมั่นคง ออมเงินและสร้างอนาคตให้ลูก">
+      <img class="poster zoomable" tabindex="0" src="images/img-44-a707ff5176.jpg" alt="หนุ่ย ขวัญฤดี ขวัญคุ้ม ตัวแทนประกันชีวิตและประกันสุขภาพ: วางแผนชีวิตและการเงิน คุ้มครองสุขภาพและค่ารักษา สร้างหลักประกันให้ครอบครัว วางแผนเกษียณอย่างมั่นคง ออมเงินและสร้างอนาคตให้ลูก">
       <div class="about-text">
         <span class="kicker">รู้จักหนุ่ย</span>
         <h2 class="h2x">ดูแลคุณและคนที่คุณรัก<br><span>ด้วยแผนประกันที่เหมาะสม</span></h2>
@@ -1829,7 +1987,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
       <div class="sec-head"><span class="kicker">ขั้นตอนการรับบริการ</span>
         <h2 class="h2x">ง่ายเพียง 4 ขั้นตอน<br><span>ดูแลต่อเนื่องจนถึงวันเคลม</span></h2><p>เริ่มจากรับฟังเป้าหมาย จนถึงวันที่ต้องใช้สิทธิ์เคลม</p></div>
 <div class="steps-grid">
-            <img class="consult zoomable" tabindex="0" src="images/img-41-6ee0b1516f.jpg" alt="ภาพประกอบ ตัวแทนประกันอธิบายแผนประกันให้ครอบครัว">
+            <img class="consult zoomable" tabindex="0" src="images/img-45-6ee0b1516f.jpg" alt="ภาพประกอบ ตัวแทนประกันอธิบายแผนประกันให้ครอบครัว">
       <ol class="steps">
         <li><h3>นัดคุยเป้าหมาย</h3><p>สอบถามภาระครอบครัว สวัสดิการที่มี และงบประมาณต่อปี</p></li>
         <li><h3>วิเคราะห์ช่องว่าง</h3><p>เทียบความคุ้มครองเดิมกับค่ารักษาจริง หาส่วนที่ยังขาด</p></li>
@@ -2007,14 +2165,14 @@ html.paged [data-page]:not(.pg-on){display:none!important}
       </div>
       <div class="contact">
         <div class="contact-left">
-          <img class="poster2 zoomable" tabindex="0" src="images/img-42-83a24b2189.jpg" alt="หนุ่ย ที่ปรึกษาประกันชีวิตและสุขภาพ ให้คำปรึกษาฟรี ไม่มีค่าใช้จ่าย: ประกันสุขภาพ ประกันชีวิต ประกันโรคร้ายแรง ประกันสะสมทรัพย์ ประกันการศึกษา">
+          <img class="poster2 zoomable" tabindex="0" src="images/img-46-83a24b2189.jpg" alt="หนุ่ย ที่ปรึกษาประกันชีวิตและสุขภาพ ให้คำปรึกษาฟรี ไม่มีค่าใช้จ่าย: ประกันสุขภาพ ประกันชีวิต ประกันโรคร้ายแรง ประกันสะสมทรัพย์ ประกันการศึกษา">
           <div class="panel">
           <h3 style="font-size:1.1rem">ช่องทางติดต่อ</h3>
           <div class="ch">
             <div class="line"><span>โทร</span><b class="num" data-cfg="phone"></b></div>
             <div class="line"><span>LINE</span><b data-cfg="line"></b></div>
             <div class="qr-box">
-              <img class="qr" src="images/img-43-cfb7368b33.png" alt="QR Code เพิ่มเพื่อน LINE OA หนุ่ย ครบเครื่องเรื่องประกัน">
+              <img class="qr" src="images/img-47-cfb7368b33.png" alt="QR Code เพิ่มเพื่อน LINE OA หนุ่ย ครบเครื่องเรื่องประกัน">
               <div><b>สแกนเพื่อเพิ่มเพื่อน</b><p class="note">LINE OA @039bkjrx<br>หนุ่ย ครบเครื่องเรื่องประกัน</p></div>
             </div>
             <a class="btn btn-line" data-line-add href="#contact" target="_blank" rel="noopener">เพิ่มเพื่อน LINE OA หนุ่ย ครบเครื่องเรื่องประกัน</a>
@@ -2064,12 +2222,12 @@ html.paged [data-page]:not(.pg-on){display:none!important}
         <p>ทำงานเป็นทีม และเรียนรู้แบบประกันใหม่ร่วมกันอย่างสม่ำเสมอ เพื่อแนะนำลูกค้าได้ถูกต้อง</p>
       </div>
       <div class="team-gallery">
-        <button type="button" data-cap="สมาชิกทีม Family 4 คน ร่วมแสดงความยินดีที่สำนักงาน" aria-label="ดูรูปขนาดใหญ่: สมาชิกทีม Family 4 คน ร่วมแสดงความยินดีที่สำนักงาน"><img class="team-thumb zoomable" src="images/img-44-ab9ceccce2.jpg" alt="สมาชิกทีม Family 4 คน ร่วมแสดงความยินดีที่สำนักงาน" loading="lazy"></button>
-        <button type="button" data-cap="หนุ่ย (ขวา) กับสมาชิกทีม Family" aria-label="ดูรูปขนาดใหญ่: หนุ่ย (ขวา) กับสมาชิกทีม Family"><img class="team-thumb zoomable" src="images/img-45-aaeccbfdf8.jpg" alt="หนุ่ย (ขวา) กับสมาชิกทีม Family" loading="lazy"></button>
-        <button type="button" data-cap="สมาชิกทีม Family ถ่ายภาพร่วมกันที่สำนักงาน" aria-label="ดูรูปขนาดใหญ่: สมาชิกทีม Family ถ่ายภาพร่วมกันที่สำนักงาน"><img class="team-thumb zoomable" src="images/img-46-f29c2fcc2d.jpg" alt="สมาชิกทีม Family ถ่ายภาพร่วมกันที่สำนักงาน" loading="lazy"></button>
-        <button type="button" data-cap="ทีม Family ประชุมเรียนรู้แบบประกันร่วมกัน" aria-label="ดูรูปขนาดใหญ่: ทีม Family ประชุมเรียนรู้แบบประกันร่วมกัน"><img class="team-thumb zoomable" src="images/img-47-6f507f3173.jpg" alt="ทีม Family ประชุมเรียนรู้แบบประกันร่วมกัน" loading="lazy"></button>
-        <button type="button" data-cap="ทีม Family ศึกษารายละเอียดแบบประกันร่วมกันที่โต๊ะประชุม" aria-label="ดูรูปขนาดใหญ่: ทีม Family ศึกษารายละเอียดแบบประกันร่วมกันที่โต๊ะประชุม"><img class="team-thumb zoomable" src="images/img-48-031e75bb95.jpg" alt="ทีม Family ศึกษารายละเอียดแบบประกันร่วมกันที่โต๊ะประชุม" loading="lazy"></button>
-        <button type="button" data-cap="สมาชิกทีม Family ฝึกใช้ระบบเสนอแบบประกันบนแท็บเล็ต" aria-label="ดูรูปขนาดใหญ่: สมาชิกทีม Family ฝึกใช้ระบบเสนอแบบประกันบนแท็บเล็ต"><img class="team-thumb zoomable" src="images/img-49-f341dee54f.jpg" alt="สมาชิกทีม Family ฝึกใช้ระบบเสนอแบบประกันบนแท็บเล็ต" loading="lazy"></button>
+        <button type="button" data-cap="สมาชิกทีม Family 4 คน ร่วมแสดงความยินดีที่สำนักงาน" aria-label="ดูรูปขนาดใหญ่: สมาชิกทีม Family 4 คน ร่วมแสดงความยินดีที่สำนักงาน"><img class="team-thumb zoomable" src="images/img-48-ab9ceccce2.jpg" alt="สมาชิกทีม Family 4 คน ร่วมแสดงความยินดีที่สำนักงาน" loading="lazy"></button>
+        <button type="button" data-cap="หนุ่ย (ขวา) กับสมาชิกทีม Family" aria-label="ดูรูปขนาดใหญ่: หนุ่ย (ขวา) กับสมาชิกทีม Family"><img class="team-thumb zoomable" src="images/img-49-aaeccbfdf8.jpg" alt="หนุ่ย (ขวา) กับสมาชิกทีม Family" loading="lazy"></button>
+        <button type="button" data-cap="สมาชิกทีม Family ถ่ายภาพร่วมกันที่สำนักงาน" aria-label="ดูรูปขนาดใหญ่: สมาชิกทีม Family ถ่ายภาพร่วมกันที่สำนักงาน"><img class="team-thumb zoomable" src="images/img-50-f29c2fcc2d.jpg" alt="สมาชิกทีม Family ถ่ายภาพร่วมกันที่สำนักงาน" loading="lazy"></button>
+        <button type="button" data-cap="ทีม Family ประชุมเรียนรู้แบบประกันร่วมกัน" aria-label="ดูรูปขนาดใหญ่: ทีม Family ประชุมเรียนรู้แบบประกันร่วมกัน"><img class="team-thumb zoomable" src="images/img-51-6f507f3173.jpg" alt="ทีม Family ประชุมเรียนรู้แบบประกันร่วมกัน" loading="lazy"></button>
+        <button type="button" data-cap="ทีม Family ศึกษารายละเอียดแบบประกันร่วมกันที่โต๊ะประชุม" aria-label="ดูรูปขนาดใหญ่: ทีม Family ศึกษารายละเอียดแบบประกันร่วมกันที่โต๊ะประชุม"><img class="team-thumb zoomable" src="images/img-52-031e75bb95.jpg" alt="ทีม Family ศึกษารายละเอียดแบบประกันร่วมกันที่โต๊ะประชุม" loading="lazy"></button>
+        <button type="button" data-cap="สมาชิกทีม Family ฝึกใช้ระบบเสนอแบบประกันบนแท็บเล็ต" aria-label="ดูรูปขนาดใหญ่: สมาชิกทีม Family ฝึกใช้ระบบเสนอแบบประกันบนแท็บเล็ต"><img class="team-thumb zoomable" src="images/img-53-f341dee54f.jpg" alt="สมาชิกทีม Family ฝึกใช้ระบบเสนอแบบประกันบนแท็บเล็ต" loading="lazy"></button>
       </div>
       <p class="gal-hint">แตะที่รูปเพื่อดูขนาดเต็ม</p>
     </div>
@@ -2414,7 +2572,7 @@ document.querySelectorAll("[data-go-tab]").forEach(b=>b.addEventListener("click"
 document.querySelectorAll(".lang-sw a").forEach(a=>a.addEventListener("click",()=>{if(location.hash)a.href=a.href.split("#")[0]+location.hash;}));
 /* Multi-page router: one page per menu item */
 (function(){
-  const PAGES={home:[".cover-wrap","#top",".trust",".home-nav"],why:["#why","#situation"],plans:["#types","#products"],premium:["#premium"],tax:["#tax"],about:["#about","#steps","#team"],articles:["#articles"],faq:["#faq"],contact:["#contact"]};
+  const PAGES={home:[".cover-wrap","#top",".trust",".home-nav"],why:["#why","#situation"],plans:["#types","#products"],premium:["#premium"],tax:["#tax"],about:["#about","#steps","#team"],articles:["#articles"],faq:["#faq"],contact:["#contact"],ehp:["#elite-health-plus"]};
   const first={};
   Object.entries(PAGES).forEach(([pg,sels])=>sels.forEach((q,i)=>{const el=document.querySelector(q);if(el){el.dataset.page=pg;if(!first[pg])first[pg]=el;}}));
   document.documentElement.classList.add("paged");

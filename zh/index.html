@@ -921,6 +921,53 @@ html.paged [data-page]:not(.pg-on){display:none!important}
 @media (max-width:860px){.hn-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hn-img{height:90px}}
 @media (prefers-reduced-motion:reduce){.hn-tile,.hn-tile:hover{transition:none;transform:none}}
 .navlinks a.on{color:var(--brand);font-weight:700}
+
+/* Elite Health Plus detail page */
+.ehp{background:radial-gradient(720px 340px at 100% 0%,var(--soft-glow),transparent 70%),var(--soft-bg)}
+.ehp-back{display:inline-block;margin-bottom:14px;color:var(--brand);font-weight:600;text-decoration:none}
+.ehp-hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 14px 34px rgba(80,10,45,.08)}
+.ehp-hero-img img{width:100%;max-height:360px;object-fit:cover;object-position:center 20%;border-radius:20px;display:block}
+.ehp-lead{color:var(--muted);margin:10px 0 14px}
+.ehp-big{display:inline-flex;align-items:baseline;gap:10px;flex-wrap:wrap;background:linear-gradient(120deg,var(--brand-deep),var(--brand));color:#fff;border-radius:18px;padding:12px 20px}
+.ehp-big small{width:100%;opacity:.9}
+.ehp-big b{font-family:var(--display);font-size:clamp(2.4rem,6vw,3.4rem);line-height:1;color:#ffd77a}
+.ehp-pills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:14px 0}
+.ehp-pills li{background:var(--brand-soft);color:var(--hero-title);font-weight:600;font-size:.88rem;padding:6px 12px;border-radius:999px}
+.ehp-cta{display:flex;gap:10px;flex-wrap:wrap}
+.ehp-cover{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}
+.ehp-cover div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.ehp-ic{font-size:1.7rem}
+.ehp-cover b{color:var(--hero-title)}
+.ehp-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+.ehp-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.ehp-card h3{display:flex;align-items:center;gap:10px;color:var(--hero-title);font-size:1.2rem;margin-bottom:8px}
+.ehp-n{background:var(--brand);color:#fff;font-size:.8rem;padding:4px 10px;border-radius:999px}
+.ehp-card ul{margin:0;padding-left:20px;line-height:1.7}
+.ehp-h{color:var(--hero-title);font-size:1.3rem;margin:6px 0 12px}
+.ehp-tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:18px;margin-bottom:22px}
+.ehp-tbl{width:100%;border-collapse:collapse;min-width:560px;font-size:.92rem}
+.ehp-tbl th,.ehp-tbl td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:center}
+.ehp-tbl th:first-child,.ehp-tbl td:first-child{text-align:left}
+.ehp-tbl thead th{background:var(--hero-title);color:#fff}
+.ehp-tbl thead th.hi{background:var(--brand)}
+.ehp-tbl td.hi{background:var(--brand-soft);font-weight:700;color:var(--hero-title)}
+.ehp-tbl td.all{font-weight:700;color:var(--brand)}
+.ehp-tbl td.sub{font-size:.8rem;color:var(--muted);text-align:center!important}
+.ehp-area{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:22px}
+.ehp-area-img img{width:100%;border-radius:14px;display:block}
+.ehp-areas{margin:0;padding-left:22px;line-height:1.9;font-weight:600}
+.ehp-note{font-size:.85rem;color:var(--muted);margin:6px 0 0}
+.ehp-rider{display:flex;gap:14px;align-items:flex-start}
+.ehp-rider img{width:96px;height:110px;object-fit:cover;border-radius:14px;flex:none}
+.ehp-rider h4{color:var(--hero-title);font-size:1.05rem;margin:0}
+.ehp-amt{font-family:var(--display);font-size:1.25rem;color:var(--brand);font-weight:700;margin:4px 0}
+.ehp-rider p{margin:0 0 4px;font-size:.92rem}
+.ehp-know{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:18px;padding:20px}
+.ehp-know h3{color:var(--hero-title);margin-bottom:6px}
+.ehp-know ul{padding-left:20px;line-height:1.75;margin:0 0 14px}
+.ehp-src{font-size:.78rem;color:var(--muted);margin:12px 0 0}
+.ehp-more{font-weight:700;color:var(--brand);text-decoration:none;white-space:nowrap}
+@media (max-width:860px){.ehp-hero,.ehp-area{grid-template-columns:1fr}.ehp-hero-img{order:-1}.ehp-hero-img img{max-height:260px}.ehp-two{grid-template-columns:1fr}.ehp-cover{grid-template-columns:repeat(2,minmax(0,1fr))}.ehp-hero{padding:18px}}
 </style>
 </head>
 <body>
@@ -1376,7 +1423,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
           </ul>
           <p class="note">须附加于主险保单。续保时公司可能依理赔记录设定 30% 或 50% 共付比例。</p>
           </details>
-          <div class="foot"><span class="src">资料来源：Elite Health Plus 宣传册（2025 年 3 月）</span><a class="pdf-link" href="../docs/elite-health-plus.pdf" target="_blank" rel="noopener">查看宣传册（PDF）</a><button class="ask" type="button" data-p="Elite Health Plus">索取报价 →</button></div>
+          <div class="foot"><span class="src">资料来源：Elite Health Plus 宣传册（2025 年 3 月）</span><a class="pdf-link" href="../docs/elite-health-plus.pdf" target="_blank" rel="noopener">查看宣传册（PDF）</a><a class="ehp-more" href="#elite-health-plus">查看详情 →</a><button class="ask" type="button" data-p="Elite Health Plus">索取报价 →</button></div>
         </article>
 
         <article class="prod" data-cat="health">
@@ -1734,6 +1781,117 @@ html.paged [data-page]:not(.pg-on){display:none!important}
     </div>
   </section>
 
+
+  <section id="elite-health-plus" class="ehp">
+    <div class="wrap">
+      <a class="ehp-back" href="#products">← 返回保险方案</a>
+      <div class="ehp-hero">
+        <div class="ehp-hero-txt">
+          <span class="kicker">高端健康保险</span>
+          <h2 class="h2x">Elite Health Plus<br><span>覆盖泰国及全球的全面保障</span></h2>
+          <p class="ehp-lead">在新健康保险标准（New Health Standard）下，全面提升住院与门诊保障</p>
+          <div class="ehp-big"><small>最高保障额度</small><b>20–100</b><span>百万泰铢/年</span></div>
+          <ul class="ehp-pills">
+            <li>投保年龄 11–90 岁</li>
+            <li>保障至 99 岁</li>
+            <li>4 种保障区域</li>
+          </ul>
+          <div class="ehp-cta">
+            <button class="btn btn-brand ask" type="button" data-p="Elite Health Plus">索取报价</button>
+            <a class="btn btn-ghost" href="../docs/elite-health-plus.pdf" target="_blank" rel="noopener">查看宣传册（PDF）</a>
+          </div>
+        </div>
+        <div class="ehp-hero-img"><img src="../images/img-39-3244e9d9e2.jpg" alt="示意图：自信微笑的女性"></div>
+      </div>
+
+      <div class="ehp-cover">
+        <div><span class="ehp-ic">🦠</span><b>传染病</b></div>
+        <div><span class="ehp-ic">🎗️</span><b>重大疾病</b></div>
+        <div><span class="ehp-ic">🩺</span><b>一般疾病</b></div>
+        <div><span class="ehp-ic">🚑</span><b>意外</b></div>
+      </div>
+
+      <div class="ehp-two">
+        <article class="ehp-card">
+          <h3><span class="ehp-n">IPD</span>住院</h3>
+          <ul>
+            <li>任何医院的标准单人房，或按方案每天 10,000–25,000 泰铢的特别单人房</li>
+            <li>ICU 按实际费用赔付，合计最长 365 天</li>
+            <li>住院治疗费用按实际赔付</li>
+          </ul>
+        </article>
+        <article class="ehp-card">
+          <h3><span class="ehp-n">OPD</span>门诊</h3>
+          <ul>
+            <li>癌症靶向治疗（Targeted Therapy）及化疗</li>
+            <li>MRI 及 CT 扫描诊断</li>
+            <li>无需住院的肾病治疗，按实际费用赔付</li>
+            <li>一般门诊费用，按所选方案年度限额赔付</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="ehp-h">比较 4 个保障方案</h3>
+      <div class="ehp-tbl-wrap">
+        <table class="ehp-tbl">
+          <thead><tr><th>保障项目（泰铢）</th><th>2,000 万方案</th><th>4,000 万方案</th><th>7,500 万方案</th><th class="hi">1 亿方案</th></tr></thead>
+          <tbody>
+            <tr><td>病房（每天）</td><td>10,000</td><td>12,000</td><td>15,000</td><td class="hi">25,000</td></tr>
+            <tr><td colspan="5" class="sub">或不超过标准单人房费用，以较高者为准</td></tr>
+            <tr><td>ICU、住院、肾病治疗、靶向治疗、紧急援助</td><td colspan="4" class="all">按实际赔付</td></tr>
+            <tr><td>门诊（OPD）每年</td><td>不保障</td><td>20,000</td><td>40,000</td><td class="hi">按实际赔付</td></tr>
+            <tr><td>针灸、自然疗法、骨骼肌肉治疗（每年）</td><td colspan="2">不保障</td><td>10,000</td><td class="hi">40,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ehp-area">
+        <div class="ehp-area-img"><img src="../images/img-40-20fd6ee2be.jpg" alt="示意图：泰国及海外城市"></div>
+        <div>
+          <h3 class="ehp-h">4 种保障区域任选其一</h3>
+          <ol class="ehp-areas">
+            <li>仅限泰国</li>
+            <li>亚洲（46 个国家）</li>
+            <li>全球（不含美国）</li>
+            <li>全球（含美国）</li>
+          </ol>
+          <p class="ehp-note">所有方案均可选择，保费因所选区域而异</p>
+        </div>
+      </div>
+
+      <h3 class="ehp-h">可选附加保障</h3>
+      <div class="ehp-two">
+        <article class="ehp-card ehp-rider">
+          <img src="../images/img-41-0ef1e6549c.jpg" alt="示意图：母亲与新生儿">
+          <div><h4>生育附加保障（Maternity Plus）</h4>
+          <p class="ehp-amt">每保单年度 200–400 万泰铢</p>
+          <p>涵盖孕期、分娩及产后护理；投保年龄 15–49 岁；仅限泰国境内</p></div>
+        </article>
+        <article class="ehp-card ehp-rider">
+          <img src="../images/img-42-10f1449f88.jpg" alt="示意图：戴眼镜的女性">
+          <div><h4>健康附加保障（Well-Being Plus）</h4>
+          <p class="ehp-amt">每保单年度 24,000–38,500 泰铢</p>
+          <p>年度体检、WHO 认可疫苗、眼部护理及牙齿护理</p></div>
+        </article>
+      </div>
+
+      <div class="ehp-know">
+        <h3>须知事项</h3>
+        <ul>
+          <li>须附加于人寿主险保单；可续保至 98 岁，保障至 99 岁</li>
+          <li>续保时，公司可能依理赔记录设定 30% 或 50% 共付</li>
+          <li>保费取决于年龄、性别、职业等级、方案及保障区域，并可能在每个保单周年按年龄调整</li>
+          <li>共有 21 项除外责任，例如美容手术；详见宣传册及保单</li>
+        </ul>
+        <div class="ehp-cta">
+          <button class="btn btn-brand ask" type="button" data-p="Elite Health Plus（按年龄的保费表）">获取我的年龄保费</button>
+          <a class="btn btn-ghost" href="../docs/elite-health-plus.pdf" target="_blank" rel="noopener">查看宣传册（PDF）</a>
+        </div>
+        <p class="ehp-src">资料来源：Muang Thai Life Elite Health Plus 宣传册（MTL_2-02-04-0480，2025 年 3 月 20 日），实际保障以保单为准。</p>
+      </div>
+    </div>
+  </section>
+
   <section id="premium">
     <div class="wrap">
       <div class="sec-head">
@@ -1742,7 +1900,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
         <p>仅显示公司产品文件中公布的保费示例。如需按您的年龄和方案计算保费，请通过 LINE 将资料发给 Nui，以获取公司系统的报价。</p>
       </div>
       <div class="premium-grid">
-      <img class="calc-banner zoomable" tabindex="0" src="../images/img-39-954e6e3422.jpg" alt="轻松查看保费示例并比较方案：健康、重疾、寿险、意外、年金">
+      <img class="calc-banner zoomable" tabindex="0" src="../images/img-43-954e6e3422.jpg" alt="轻松查看保费示例并比较方案：健康、重疾、寿险、意外、年金">
       <div class="calc">
         <form class="panel" id="pForm">
           <div class="field"><label for="pProd">保险方案</label>
@@ -1807,7 +1965,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
 
   <section class="about" id="about">
     <div class="wrap about-grid">
-      <img class="poster zoomable" tabindex="0" src="../images/img-40-a707ff5176.jpg" alt="Nui Khuanruedee Khuankum，人寿与健康保险代理人：人生与财务规划、健康与医疗保障、家庭保障、稳健退休、为孩子储蓄未来">
+      <img class="poster zoomable" tabindex="0" src="../images/img-44-a707ff5176.jpg" alt="Nui Khuanruedee Khuankum，人寿与健康保险代理人：人生与财务规划、健康与医疗保障、家庭保障、稳健退休、为孩子储蓄未来">
       <div class="about-text">
         <span class="kicker">认识 Nui</span>
         <h2 class="h2x">照顾您和您所爱的人<br><span>用合适的保险方案</span></h2>
@@ -1829,7 +1987,7 @@ html.paged [data-page]:not(.pg-on){display:none!important}
       <div class="sec-head"><span class="kicker">服务流程</span>
         <h2 class="h2x">只需简单 4 步<br><span>持续服务直到理赔</span></h2><p>从了解您的目标，到您需要理赔的那一天</p></div>
 <div class="steps-grid">
-            <img class="consult zoomable" tabindex="0" src="../images/img-41-6ee0b1516f.jpg" alt="示意图：代理人向家庭讲解保险方案">
+            <img class="consult zoomable" tabindex="0" src="../images/img-45-6ee0b1516f.jpg" alt="示意图：代理人向家庭讲解保险方案">
       <ol class="steps">
         <li><h3>沟通您的目标</h3><p>了解家庭负担、现有福利及年度预算</p></li>
         <li><h3>分析保障缺口</h3><p>将现有保障与实际医疗费用比较，找出不足</p></li>
@@ -2007,14 +2165,14 @@ html.paged [data-page]:not(.pg-on){display:none!important}
       </div>
       <div class="contact">
         <div class="contact-left">
-          <img class="poster2 zoomable" tabindex="0" src="../images/img-42-83a24b2189.jpg" alt="Nui，人寿与健康保险顾问，免费咨询：健康险、寿险、重疾险、储蓄险、教育险">
+          <img class="poster2 zoomable" tabindex="0" src="../images/img-46-83a24b2189.jpg" alt="Nui，人寿与健康保险顾问，免费咨询：健康险、寿险、重疾险、储蓄险、教育险">
           <div class="panel">
           <h3 style="font-size:1.1rem">联系方式</h3>
           <div class="ch">
             <div class="line"><span>电话</span><b class="num" data-cfg="phone"></b></div>
             <div class="line"><span>LINE</span><b data-cfg="line"></b></div>
             <div class="qr-box">
-              <img class="qr" src="../images/img-43-cfb7368b33.png" alt="添加 LINE OA「Nui 全方位保险顾问」的二维码">
+              <img class="qr" src="../images/img-47-cfb7368b33.png" alt="添加 LINE OA「Nui 全方位保险顾问」的二维码">
               <div><b>扫码添加好友</b><p class="note">LINE OA @039bkjrx<br>Nui 全方位保险顾问</p></div>
             </div>
             <a class="btn btn-line" data-line-add href="#contact" target="_blank" rel="noopener">添加 LINE OA「Nui 全方位保险顾问」</a>
@@ -2064,12 +2222,12 @@ html.paged [data-page]:not(.pg-on){display:none!important}
         <p>我们以团队方式工作，并定期一起学习新保险方案，以便为客户提供正确建议</p>
       </div>
       <div class="team-gallery">
-        <button type="button" data-cap="Family 团队 4 位成员在办公室一起庆祝" aria-label="查看大图：Family 团队 4 位成员在办公室一起庆祝"><img class="team-thumb zoomable" src="../images/img-44-ab9ceccce2.jpg" alt="Family 团队 4 位成员在办公室一起庆祝" loading="lazy"></button>
-        <button type="button" data-cap="Nui（右）与 Family 团队成员" aria-label="查看大图：Nui（右）与 Family 团队成员"><img class="team-thumb zoomable" src="../images/img-45-aaeccbfdf8.jpg" alt="Nui（右）与 Family 团队成员" loading="lazy"></button>
-        <button type="button" data-cap="Family 团队成员在办公室合影" aria-label="查看大图：Family 团队成员在办公室合影"><img class="team-thumb zoomable" src="../images/img-46-f29c2fcc2d.jpg" alt="Family 团队成员在办公室合影" loading="lazy"></button>
-        <button type="button" data-cap="Family 团队一起学习保险方案" aria-label="查看大图：Family 团队一起学习保险方案"><img class="team-thumb zoomable" src="../images/img-47-6f507f3173.jpg" alt="Family 团队一起学习保险方案" loading="lazy"></button>
-        <button type="button" data-cap="Family 团队在会议桌前研究方案细节" aria-label="查看大图：Family 团队在会议桌前研究方案细节"><img class="team-thumb zoomable" src="../images/img-48-031e75bb95.jpg" alt="Family 团队在会议桌前研究方案细节" loading="lazy"></button>
-        <button type="button" data-cap="Family 团队成员在平板电脑上练习使用投保建议系统" aria-label="查看大图：Family 团队成员在平板电脑上练习使用投保建议系统"><img class="team-thumb zoomable" src="../images/img-49-f341dee54f.jpg" alt="Family 团队成员在平板电脑上练习使用投保建议系统" loading="lazy"></button>
+        <button type="button" data-cap="Family 团队 4 位成员在办公室一起庆祝" aria-label="查看大图：Family 团队 4 位成员在办公室一起庆祝"><img class="team-thumb zoomable" src="../images/img-48-ab9ceccce2.jpg" alt="Family 团队 4 位成员在办公室一起庆祝" loading="lazy"></button>
+        <button type="button" data-cap="Nui（右）与 Family 团队成员" aria-label="查看大图：Nui（右）与 Family 团队成员"><img class="team-thumb zoomable" src="../images/img-49-aaeccbfdf8.jpg" alt="Nui（右）与 Family 团队成员" loading="lazy"></button>
+        <button type="button" data-cap="Family 团队成员在办公室合影" aria-label="查看大图：Family 团队成员在办公室合影"><img class="team-thumb zoomable" src="../images/img-50-f29c2fcc2d.jpg" alt="Family 团队成员在办公室合影" loading="lazy"></button>
+        <button type="button" data-cap="Family 团队一起学习保险方案" aria-label="查看大图：Family 团队一起学习保险方案"><img class="team-thumb zoomable" src="../images/img-51-6f507f3173.jpg" alt="Family 团队一起学习保险方案" loading="lazy"></button>
+        <button type="button" data-cap="Family 团队在会议桌前研究方案细节" aria-label="查看大图：Family 团队在会议桌前研究方案细节"><img class="team-thumb zoomable" src="../images/img-52-031e75bb95.jpg" alt="Family 团队在会议桌前研究方案细节" loading="lazy"></button>
+        <button type="button" data-cap="Family 团队成员在平板电脑上练习使用投保建议系统" aria-label="查看大图：Family 团队成员在平板电脑上练习使用投保建议系统"><img class="team-thumb zoomable" src="../images/img-53-f341dee54f.jpg" alt="Family 团队成员在平板电脑上练习使用投保建议系统" loading="lazy"></button>
       </div>
       <p class="gal-hint">点击图片查看大图</p>
     </div>
@@ -2414,7 +2572,7 @@ document.querySelectorAll("[data-go-tab]").forEach(b=>b.addEventListener("click"
 document.querySelectorAll(".lang-sw a").forEach(a=>a.addEventListener("click",()=>{if(location.hash)a.href=a.href.split("#")[0]+location.hash;}));
 /* Multi-page router: one page per menu item */
 (function(){
-  const PAGES={home:[".cover-wrap","#top",".trust",".home-nav"],why:["#why","#situation"],plans:["#types","#products"],premium:["#premium"],tax:["#tax"],about:["#about","#steps","#team"],articles:["#articles"],faq:["#faq"],contact:["#contact"]};
+  const PAGES={home:[".cover-wrap","#top",".trust",".home-nav"],why:["#why","#situation"],plans:["#types","#products"],premium:["#premium"],tax:["#tax"],about:["#about","#steps","#team"],articles:["#articles"],faq:["#faq"],contact:["#contact"],ehp:["#elite-health-plus"]};
   const first={};
   Object.entries(PAGES).forEach(([pg,sels])=>sels.forEach((q,i)=>{const el=document.querySelector(q);if(el){el.dataset.page=pg;if(!first[pg])first[pg]=el;}}));
   document.documentElement.classList.add("paged");
